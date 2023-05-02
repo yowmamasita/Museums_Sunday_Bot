@@ -1,0 +1,5 @@
+name = "museums-sunday-bot"
+main = "packages/worker/dist/worker/src/worker.mjs"
+compatibility_date = "2023-04-30"
+workers_dev = true
+build.command = "npm install && npm run build:worker"
