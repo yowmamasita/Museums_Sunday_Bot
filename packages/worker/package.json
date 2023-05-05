@@ -10,7 +10,7 @@
 		"build": "tsc --project tsconfig.json && esbuild dist/worker/src/worker.js --format=esm --bundle --minify --outfile=dist/worker/src/worker.mjs",
 		"lint": "eslint src"
 	},
-	"author": "codebam",
+	"author": "Ben Adrian Sarmiento <me@bensarmiento.com>",
 	"license": "Apache-2.0",
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20230419.0",
