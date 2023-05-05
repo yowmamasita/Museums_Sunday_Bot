@@ -3,3 +3,8 @@ main = "packages/worker/dist/worker/src/worker.mjs"
 compatibility_date = "2023-04-30"
 workers_dev = true
 build.command = "npm install && npm run build:worker"
+
+kv_namespaces = [
+    {binding="KV_GET_SET", id="5a2ba252c5bb4b50840522fa906c4b92"},
+    {binding="KV_UID_DATA", id="673c5dee40b044f9a5719aac9363e304"}
+]
