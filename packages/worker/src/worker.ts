@@ -14,7 +14,11 @@ interface Environment {
 
 export default {
 	fetch: async (request: Request, env: Environment) =>
-		new Handler([
+		{
+			console.log(env.SECRET_TELEGRAM_API_TOKEN)
+			console.log(request.url)
+			console.log((new URL(new URL(request.url).origin)).toString())
+			return new Handler([
 			{
 				bot_name: "@Museums_Sunday_Bot",
 				api: TelegramBot,
@@ -45,5 +49,5 @@ export default {
 				},
 				kv: { get_set: env.KV_GET_SET, uid_data: env.KV_UID_DATA },
 			},
-		]).handle(request),
+		]).handle(request)},
 };
