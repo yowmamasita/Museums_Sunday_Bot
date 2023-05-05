@@ -4,6 +4,7 @@ import { WebhookCommands } from "./types";
 
 export default class TelegramWebhook extends Webhook {
 	constructor(api: URL, token: string, url: URL) {
+		console.log(api, token, url);
 		super(api, token, url);
 	}
 

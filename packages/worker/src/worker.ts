@@ -15,7 +15,6 @@ interface Environment {
 export default {
 	fetch: async (request: Request, env: Environment) =>
 		{
-			console.log(`https://api.telegram.org/bot${env.SECRET_TELEGRAM_API_TOKEN}`)
 			try {
 				return new Handler([
 					{
