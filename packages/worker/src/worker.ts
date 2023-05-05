@@ -15,9 +15,8 @@ interface Environment {
 export default {
 	fetch: async (request: Request, env: Environment) =>
 		{
-			console.log(env.SECRET_TELEGRAM_API_TOKEN)
-			console.log(request.url)
-			console.log((new URL(new URL(request.url).origin)).toString())
+			console.log(`https://api.telegram.org/bot${env.SECRET_TELEGRAM_API_TOKEN}`)
+			console.log(TelegramBot)
 			return new Handler([
 			{
 				bot_name: "@Museums_Sunday_Bot",
@@ -30,6 +29,7 @@ export default {
 					new URL(new URL(request.url).origin)
 				),
 				commands: {
+					inline: TelegramCommands.ping as Command,
 					"/ping": TelegramCommands.ping as Command,
 					"/toss": TelegramCommands.toss as Command,
 					"/epoch": TelegramCommands.epoch as Command,
